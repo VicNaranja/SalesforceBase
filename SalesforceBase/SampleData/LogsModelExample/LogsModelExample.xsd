@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+      *********    NO MODIFIQUE ESTE ARCHIVO     *********
+      Este archivo se regenera mediante una herramienta de diseño.
+       Si realiza cambios en este archivo, puede causar errores.
+-->
+<xs:schema xmlns:blend="http://schemas.microsoft.com/expression/blend/2008" xmlns:tns="Expression.Blend.SampleData.LogsModelExample" targetNamespace="Expression.Blend.SampleData.LogsModelExample" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="LogsModelExample" type="tns:LogsModelExample" />
+  <xs:complexType name="LogsModelExample">
+    <xs:sequence>
+      <xs:element name="Collection" type="tns:ItemCollection" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ItemCollection">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="Item" type="tns:Item" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Item">
+    <xs:attribute name="App" type="xs:string" />
+    <xs:attribute blend:FormatParameters="4,12" name="TipoLog" type="xs:string" />
+    <xs:attribute blend:FormatParameters="4,12" name="Descripcion" type="xs:string" />
+  </xs:complexType>
+</xs:schema>

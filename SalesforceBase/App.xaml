@@ -1,0 +1,22 @@
+﻿<Application
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone" xmlns:SampleData="clr-namespace:Expression.Blend.SampleData.LogsModelExample" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
+    x:Class="SalesforceBase.App"
+    >
+
+    <!--Recursos de la aplicación-->
+    <Application.Resources>
+    	<SampleData:LogsModelExample x:Key="LogsModelExample" d:IsDataSource="True"/>
+        <local:LocalizedStrings xmlns:local="clr-namespace:SalesforceBase" x:Key="LocalizedStrings"/>
+    </Application.Resources>
+
+    <Application.ApplicationLifetimeObjects>
+        <!--Objeto requerido que controla los eventos de duración de la aplicación-->
+        <shell:PhoneApplicationService
+            Launching="Application_Launching" Closing="Application_Closing"
+            Activated="Application_Activated" Deactivated="Application_Deactivated"/>
+    </Application.ApplicationLifetimeObjects>
+
+</Application>
