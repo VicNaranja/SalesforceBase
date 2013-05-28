@@ -38,18 +38,18 @@ namespace Expression.Blend.SampleData.LogsModelExample
 			}
 		}
 
-		private ItemCollection _Collection = new ItemCollection();
+		private ListaLogs _ListaLogs = new ListaLogs();
 
-		public ItemCollection Collection
+		public ListaLogs ListaLogs
 		{
 			get
 			{
-				return this._Collection;
+				return this._ListaLogs;
 			}
 		}
 	}
 
-	public class Item : System.ComponentModel.INotifyPropertyChanged
+	public class ListaLogsItem : System.ComponentModel.INotifyPropertyChanged
 	{
 		public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
 
@@ -119,7 +119,7 @@ namespace Expression.Blend.SampleData.LogsModelExample
 		}
 	}
 
-	public class ItemCollection : System.Collections.ObjectModel.ObservableCollection<Item>
+	public class ListaLogs : System.Collections.ObjectModel.ObservableCollection<ListaLogsItem>
 	{ 
 	}
 #endif

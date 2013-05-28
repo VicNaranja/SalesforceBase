@@ -112,6 +112,8 @@
     </Compile>
     <Compile Include="SFDC\SFDCRestApi.cs" />
     <Compile Include="SFDC\SFDCSession.cs" />
+    <Compile Include="ViewModels\ListaLogsModel.cs" />
+    <Compile Include="ViewModels\LogModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -158,6 +160,8 @@
     <Content Include="Assets\Tiles\IconicTileSmall.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Images\edit.png" />
+    <Content Include="Images\new.png" />
     <Content Include="Lib\Newtonsoft.Json.dll" />
   </ItemGroup>
   <ItemGroup>

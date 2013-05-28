@@ -4,47 +4,47 @@
        Si realiza cambios en este archivo, puede causar errores.
 -->
 <SampleData:LogsModelExample xmlns:SampleData="clr-namespace:Expression.Blend.SampleData.LogsModelExample" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
-  <SampleData:LogsModelExample.Collection>
-    <SampleData:Item App="Aliquam maecenas" TipoLog="Curabitur aenean" Descripcion="Class pellentesque consectetuer" />
-    <SampleData:Item App="Cras class curae" TipoLog="Mauris vestibulum" Descripcion="Maecenas praesent aenean" />
-    <SampleData:Item App="Duis integer aenean" TipoLog="Nam phasellus class" Descripcion="Nam vestibulum accumsan" />
-    <SampleData:Item App="Mauris nunc" TipoLog="Aliquam nullam cras" Descripcion="Sed curae" />
-    <SampleData:Item App="Quisque donec" TipoLog="Duis sed" Descripcion="Suspendisse curabitur bibendum" />
-    <SampleData:Item App="Praesent accumsan nam" TipoLog="Curae nunc maecenas" Descripcion="Dis aliquam" />
-    <SampleData:Item App="Amet bibendum" TipoLog="Praesent pellentesque dis" Descripcion="Condimentum est phasellus" />
-    <SampleData:Item App="Dictumst sed" TipoLog="Adipiscing consequat consectetuer" Descripcion="Integer mauris" />
-    <SampleData:Item App="Nullam eleifend aptent" TipoLog="Donec est amet" Descripcion="Pellentesque quisque" />
-    <SampleData:Item App="Facilisi dis faucibus est" TipoLog="Integer pellentesque" Descripcion="Sollicitudin donec dictumst" />
-    <SampleData:Item App="Maecenas cras class" TipoLog="Aliquam maecenas class" Descripcion="Nam aenean suspendisse" />
-    <SampleData:Item App="Curae mauris nullam" TipoLog="Pellentesque cras" Descripcion="Sed curabitur" />
-    <SampleData:Item App="Praesent integer" TipoLog="Condimentum donec etiam duis" Descripcion="Accumsan dis" />
-    <SampleData:Item App="Bibendum fusce" TipoLog="Phasellus aptent lorem auctor" Descripcion="Morbi nunc" />
-    <SampleData:Item App="Amet est quisque dictumst" TipoLog="Hac scelerisque eleifend" Descripcion="Ullamcorper consectetuer" />
-    <SampleData:Item App="Facilisi ante" TipoLog="Arcu leo nulla mus" Descripcion="Consequat faucibus" />
-    <SampleData:Item App="Diam eget elit enim" TipoLog="Erat vestibulum adipiscing" Descripcion="Parturient congue" />
-    <SampleData:Item App="Cursus nec" TipoLog="Convallis vestibulum non habitant" Descripcion="Eros dictum vivamus suspendisse" />
-    <SampleData:Item App="Proin per lectus" TipoLog="Sed augue sem" Descripcion="Dolor fames condimentum" />
-    <SampleData:Item App="Felis inceptos" TipoLog="Dignissim aliquam sit vestibulum" Descripcion="Pellentesque vel" />
-    <SampleData:Item App="Interdum lobortis nam ipsum" TipoLog="Sed justo elementum" Descripcion="Libero nascetur lacus" />
-    <SampleData:Item App="Nibh pharetra" TipoLog="Adipiscing sollicitudin" Descripcion="Parturient scelerisque nisi lorem" />
-    <SampleData:Item App="Magna aliquet nisl" TipoLog="Dis massa pellentesque blandit" Descripcion="Ullamcorper metus" />
-    <SampleData:Item App="Morbi placerat" TipoLog="Pulvinar facilisis est" Descripcion="Hac commodo" />
-    <SampleData:Item App="Nunc neque netus nulla" TipoLog="Porta consectetuer" Descripcion="Suspendisse vestibulum vestibulum" />
-    <SampleData:Item App="Conubia leo purus mus" TipoLog="Cubilia risus adipiscing" Descripcion="Ligula parturient velit odio" />
-    <SampleData:Item App="Dapibus sagittis litora" TipoLog="Orci pellentesque" Descripcion="Vitae sollicitudin" />
-    <SampleData:Item App="Pede class senectus" TipoLog="Fermentum curae" Descripcion="Condimentum luctus vestibulum" />
-    <SampleData:Item App="Quam magnis mattis sociosqu" TipoLog="Suscipit pellentesque torquent" Descripcion="Mauris ultrices scelerisque" />
-    <SampleData:Item App="Nec egestas" TipoLog="Ullamcorper donec non" Descripcion="Etiam suspendisse vestibulum" />
-    <SampleData:Item App="Vehicula euismod quis" TipoLog="Condimentum fusce volutpat per" Descripcion="Consectetuer fringilla" />
-    <SampleData:Item App="Urna feugiat sed" TipoLog="Scelerisque gravida adipiscing habitasse" Descripcion="Pellentesque lorem parturient" />
-    <SampleData:Item App="Iaculis lacinia" TipoLog="Morbi nulla hendrerit sem" Descripcion="Proin sollicitudin laoreet" />
-    <SampleData:Item App="Sit vel augue mollis" TipoLog="Vestibulum natoque pellentesque" Descripcion="Himenaeos maecenas montes nostra" />
-    <SampleData:Item App="Nam praesent ornare cras" TipoLog="Dolor posuere" Descripcion="Platea sed accumsan" />
-    <SampleData:Item App="Bibendum dis" TipoLog="Fames ullamcorper" Descripcion="Dictumst est" />
-    <SampleData:Item App="Hac primis felis" TipoLog="Eleifend vestibulum consectetuer" Descripcion="Imperdiet facilisi" />
-    <SampleData:Item App="Faucibus rutrum" TipoLog="Suspendisse duis" Descripcion="Potenti sapien habitant nunc" />
-    <SampleData:Item App="Leo semper" TipoLog="Pellentesque malesuada condimentum" Descripcion="Amet mus nec" />
-    <SampleData:Item App="Non pretium ante" TipoLog="Sociis inceptos" Descripcion="Per scelerisque penatibus" />
-    <SampleData:Item App="Sed taciti ipsum" TipoLog="Tellus arcu sem" Descripcion="Interdum tempor rhoncus tempus" />
-  </SampleData:LogsModelExample.Collection>
+  <SampleData:LogsModelExample.ListaLogs>
+    <SampleData:ListaLogsItem App="Aliquam maecenas" TipoLog="Curabitur aenean" Descripcion="Class pellentesque consectetuer" />
+    <SampleData:ListaLogsItem App="Cras class curae" TipoLog="Mauris vestibulum" Descripcion="Maecenas praesent aenean" />
+    <SampleData:ListaLogsItem App="Duis integer aenean" TipoLog="Nam phasellus class" Descripcion="Nam vestibulum accumsan" />
+    <SampleData:ListaLogsItem App="Mauris nunc" TipoLog="Aliquam nullam cras" Descripcion="Sed curae" />
+    <SampleData:ListaLogsItem App="Quisque donec" TipoLog="Duis sed" Descripcion="Suspendisse curabitur bibendum" />
+    <SampleData:ListaLogsItem App="Praesent accumsan nam" TipoLog="Curae nunc maecenas" Descripcion="Dis aliquam" />
+    <SampleData:ListaLogsItem App="Amet bibendum" TipoLog="Praesent pellentesque dis" Descripcion="Condimentum est phasellus" />
+    <SampleData:ListaLogsItem App="Dictumst sed" TipoLog="Adipiscing consequat consectetuer" Descripcion="Integer mauris" />
+    <SampleData:ListaLogsItem App="Nullam eleifend aptent" TipoLog="Donec est amet" Descripcion="Pellentesque quisque" />
+    <SampleData:ListaLogsItem App="Facilisi dis faucibus est" TipoLog="Integer pellentesque" Descripcion="Sollicitudin donec dictumst" />
+    <SampleData:ListaLogsItem App="Maecenas cras class" TipoLog="Aliquam maecenas class" Descripcion="Nam aenean suspendisse" />
+    <SampleData:ListaLogsItem App="Curae mauris nullam" TipoLog="Pellentesque cras" Descripcion="Sed curabitur" />
+    <SampleData:ListaLogsItem App="Praesent integer" TipoLog="Condimentum donec etiam duis" Descripcion="Accumsan dis" />
+    <SampleData:ListaLogsItem App="Bibendum fusce" TipoLog="Phasellus aptent lorem auctor" Descripcion="Morbi nunc" />
+    <SampleData:ListaLogsItem App="Amet est quisque dictumst" TipoLog="Hac scelerisque eleifend" Descripcion="Ullamcorper consectetuer" />
+    <SampleData:ListaLogsItem App="Facilisi ante" TipoLog="Arcu leo nulla mus" Descripcion="Consequat faucibus" />
+    <SampleData:ListaLogsItem App="Diam eget elit enim" TipoLog="Erat vestibulum adipiscing" Descripcion="Parturient congue" />
+    <SampleData:ListaLogsItem App="Cursus nec" TipoLog="Convallis vestibulum non habitant" Descripcion="Eros dictum vivamus suspendisse" />
+    <SampleData:ListaLogsItem App="Proin per lectus" TipoLog="Sed augue sem" Descripcion="Dolor fames condimentum" />
+    <SampleData:ListaLogsItem App="Felis inceptos" TipoLog="Dignissim aliquam sit vestibulum" Descripcion="Pellentesque vel" />
+    <SampleData:ListaLogsItem App="Interdum lobortis nam ipsum" TipoLog="Sed justo elementum" Descripcion="Libero nascetur lacus" />
+    <SampleData:ListaLogsItem App="Nibh pharetra" TipoLog="Adipiscing sollicitudin" Descripcion="Parturient scelerisque nisi lorem" />
+    <SampleData:ListaLogsItem App="Magna aliquet nisl" TipoLog="Dis massa pellentesque blandit" Descripcion="Ullamcorper metus" />
+    <SampleData:ListaLogsItem App="Morbi placerat" TipoLog="Pulvinar facilisis est" Descripcion="Hac commodo" />
+    <SampleData:ListaLogsItem App="Nunc neque netus nulla" TipoLog="Porta consectetuer" Descripcion="Suspendisse vestibulum vestibulum" />
+    <SampleData:ListaLogsItem App="Conubia leo purus mus" TipoLog="Cubilia risus adipiscing" Descripcion="Ligula parturient velit odio" />
+    <SampleData:ListaLogsItem App="Dapibus sagittis litora" TipoLog="Orci pellentesque" Descripcion="Vitae sollicitudin" />
+    <SampleData:ListaLogsItem App="Pede class senectus" TipoLog="Fermentum curae" Descripcion="Condimentum luctus vestibulum" />
+    <SampleData:ListaLogsItem App="Quam magnis mattis sociosqu" TipoLog="Suscipit pellentesque torquent" Descripcion="Mauris ultrices scelerisque" />
+    <SampleData:ListaLogsItem App="Nec egestas" TipoLog="Ullamcorper donec non" Descripcion="Etiam suspendisse vestibulum" />
+    <SampleData:ListaLogsItem App="Vehicula euismod quis" TipoLog="Condimentum fusce volutpat per" Descripcion="Consectetuer fringilla" />
+    <SampleData:ListaLogsItem App="Urna feugiat sed" TipoLog="Scelerisque gravida adipiscing habitasse" Descripcion="Pellentesque lorem parturient" />
+    <SampleData:ListaLogsItem App="Iaculis lacinia" TipoLog="Morbi nulla hendrerit sem" Descripcion="Proin sollicitudin laoreet" />
+    <SampleData:ListaLogsItem App="Sit vel augue mollis" TipoLog="Vestibulum natoque pellentesque" Descripcion="Himenaeos maecenas montes nostra" />
+    <SampleData:ListaLogsItem App="Nam praesent ornare cras" TipoLog="Dolor posuere" Descripcion="Platea sed accumsan" />
+    <SampleData:ListaLogsItem App="Bibendum dis" TipoLog="Fames ullamcorper" Descripcion="Dictumst est" />
+    <SampleData:ListaLogsItem App="Hac primis felis" TipoLog="Eleifend vestibulum consectetuer" Descripcion="Imperdiet facilisi" />
+    <SampleData:ListaLogsItem App="Faucibus rutrum" TipoLog="Suspendisse duis" Descripcion="Potenti sapien habitant nunc" />
+    <SampleData:ListaLogsItem App="Leo semper" TipoLog="Pellentesque malesuada condimentum" Descripcion="Amet mus nec" />
+    <SampleData:ListaLogsItem App="Non pretium ante" TipoLog="Sociis inceptos" Descripcion="Per scelerisque penatibus" />
+    <SampleData:ListaLogsItem App="Sed taciti ipsum" TipoLog="Tellus arcu sem" Descripcion="Interdum tempor rhoncus tempus" />
+  </SampleData:LogsModelExample.ListaLogs>
 </SampleData:LogsModelExample>

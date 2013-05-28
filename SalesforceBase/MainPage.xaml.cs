@@ -11,15 +11,25 @@ using SalesforceBase.Resources;
 using SalesforceBase.SFDC;
 using System.IO;
 using System.Text;
+using System.Collections.ObjectModel;
+using SalesforceBase.ViewModels;
 
 namespace SalesforceBase
 {
     public partial class MainPage : PhoneApplicationPage
     {
+
+        public ListaLogsModel listaLogs { get; set; }
+
         // Constructor
         public MainPage()
         {
             InitializeComponent();
+
+            listaLogs = new ListaLogsModel();
+            DataContext = listaLogs;
+
+            var v = (Visibility)Resources["PhoneLightThemeVisibility"];
 
             // Código de ejemplo para traducir ApplicationBar
             //BuildLocalizedApplicationBar();           
@@ -40,21 +50,7 @@ namespace SalesforceBase
                 //Hacemos una peticion y recuperamos los logs
                 if (!App.Offline)
                 {
-                    var sfdcApi = new SFDCRestApi();
-                    var jsonResult = await sfdcApi.Request("GET", "query?q=SELECT+id,Aplicacion__c,Tipo_Log__c,Descripcion__c+FROM+LOG__c+ORDER+BY+CreatedDate+desc+limit+100 ");
-
-                    //prueba
-                    var records = jsonResult["records"];
-
-                    foreach (var log in records)
-                    {
-                        var descripcion = log["Descripcion__c"].ToString() ;
-                        var app = log["Aplicacion__c"].ToString();
-                        var tipoLog = log["Tipo_Log__c"].ToString();
-
-                    }
-
-
+                    listaLogs.obtenerUltimosLogs();                    
                 }
 
 

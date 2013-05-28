@@ -8,15 +8,15 @@
   <xs:element name="LogsModelExample" type="tns:LogsModelExample" />
   <xs:complexType name="LogsModelExample">
     <xs:sequence>
-      <xs:element name="Collection" type="tns:ItemCollection" />
+      <xs:element name="ListaLogs" type="tns:ListaLogs" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="ItemCollection">
+  <xs:complexType name="ListaLogs">
     <xs:sequence>
-      <xs:element maxOccurs="unbounded" name="Item" type="tns:Item" />
+      <xs:element maxOccurs="unbounded" name="ListaLogsItem" type="tns:ListaLogsItem" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="Item">
+  <xs:complexType name="ListaLogsItem">
     <xs:attribute name="App" type="xs:string" />
     <xs:attribute blend:FormatParameters="4,12" name="TipoLog" type="xs:string" />
     <xs:attribute blend:FormatParameters="4,12" name="Descripcion" type="xs:string" />

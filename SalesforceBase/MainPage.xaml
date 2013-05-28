@@ -10,7 +10,9 @@
     x:Class="SalesforceBase.MainPage"
     mc:Ignorable="d"
     SupportedOrientations="Portrait" Orientation="Portrait"
-    shell:SystemTray.IsVisible="True" Loaded="PhoneApplicationPage_Loaded_1" FontFamily="{StaticResource PhoneFontFamilyNormal}" FontSize="{StaticResource PhoneFontSizeNormal}" Foreground="{StaticResource PhoneForegroundBrush}">
+    shell:SystemTray.IsVisible="True" Loaded="PhoneApplicationPage_Loaded_1" FontFamily="{StaticResource PhoneFontFamilyNormal}" FontSize="{StaticResource PhoneFontSizeNormal}" Foreground="{StaticResource PhoneForegroundBrush}"
+    d:DataContext="{d:DesignData SampleData/LogsModelExample/LogsModelExample.xaml}"
+    >
 
     <!--LayoutRoot es la cuadrícula raíz donde se coloca todo el contenido de la página-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
@@ -47,38 +49,48 @@
     	<Grid x:Name="ContentPanel" Grid.Row="1" Margin="10,0,12,0">
         	
         	
-    		<phone:LongListSelector IsGroupingEnabled="False" HorizontalAlignment="Left" Height="Auto" VerticalAlignment="Top" Width="456" ItemsSource="{Binding Collection}">
-    			<phone:LongListSelector.Resources>
-    				<DataTemplate x:Key="DataTemplate1">
-    						
-    					<Border BorderBrush="Black" BorderThickness="1" Height="100">
-    						<StackPanel Background="#FFBF3939" Height="93">
-							<TextBlock TextWrapping="Wrap" Text="{Binding Descripcion}"/>
-    						<TextBlock TextWrapping="Wrap" Text="{Binding App}"/>
-							</StackPanel>
-    					</Border>
+    		<phone:LongListSelector x:Name="ListadoLogs" IsGroupingEnabled="False" HorizontalAlignment="Left" Height="Auto" VerticalAlignment="Top" Width="456" ItemsSource="{Binding ListaLogs}">
+    			
+                <phone:LongListSelector.ItemTemplate>
+                    <DataTemplate>
 
-    				</DataTemplate>
-    			</phone:LongListSelector.Resources>
-    			<phone:LongListSelector.ItemTemplate>
-    				<StaticResource ResourceKey="DataTemplate1"/>
-    			</phone:LongListSelector.ItemTemplate>
-    			<phone:LongListSelector.DataContext>
+                        <Border BorderBrush="Black" BorderThickness="1" >
+                            <StackPanel Margin="0,0,0,5" >
+                                <StackPanel.Background>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FF7495EC" Offset="0"/>
+                                        <GradientStop Color="#FF1F57EC" Offset="1"/>
+                                    </LinearGradientBrush>
+                                </StackPanel.Background>
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Descripcion}" Margin="5,0,0,0">
+                                    <TextBlock.Foreground>
+                                        <SolidColorBrush Color="{StaticResource PhoneAccentColor}"/>
+                                    </TextBlock.Foreground>
+                                </TextBlock>
+                                <TextBlock TextWrapping="Wrap" Text="{Binding App}" Margin="5,0,0,0" Padding="0,0,0,5"/>
+                            </StackPanel>
+                        </Border>
+
+                    </DataTemplate>
+                </phone:LongListSelector.ItemTemplate>
+                
+    			<!--<phone:LongListSelector.DataContext>
     				<SampleData:LogsModelExample/>
-    			</phone:LongListSelector.DataContext>
-        		
+    			</phone:LongListSelector.DataContext>-->
         		
     		</phone:LongListSelector>
         	
     	</Grid>
-
-        <!--Quitar la marca de comentarios para ver una cuadrícula de alineación que
-            ayuda a comprobar que los controles están alineados en los límites normales.  La imagen tiene un margen superior de -32px para
-            tener en cuenta la bandeja del sistema. Establécelo en 0 (o quite el margen)
-            si la bandeja del sistema está oculta.
-
-            Antes de enviarla, quita este código XAML y la propia imagen.-->
-        <!--<Image Source="/Assets/AlignmentGrid.png" VerticalAlignment="Top" Height="800" Width="480" Margin="0,-32,0,0" Grid.Row="0" Grid.RowSpan="2" IsHitTestVisible="False" />-->
+        
+       
     </Grid>
+
+
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar Mode="Default" IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton IconUri="/Images/new.png" Text="Nuevo"  />
+            <shell:ApplicationBarIconButton IconUri="/Images/edit.png" Text="Borrar"  />
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
 
 </phone:PhoneApplicationPage>
