@@ -5,7 +5,7 @@
 -->
 <SampleData:LogsModelExample xmlns:SampleData="clr-namespace:Expression.Blend.SampleData.LogsModelExample" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
   <SampleData:LogsModelExample.ListaLogs>
-    <SampleData:ListaLogsItem App="Aliquam maecenas" TipoLog="Curabitur aenean" Descripcion="Class pellentesque consectetuer" />
+    <SampleData:ListaLogsItem App="Aliquam maecenas" TipoLog="INFO" Descripcion="Esta es una descripcion de un log muy larga que espero que no entre entera y que ocupe varias lineas" />
     <SampleData:ListaLogsItem App="Cras class curae" TipoLog="Mauris vestibulum" Descripcion="Maecenas praesent aenean" />
     <SampleData:ListaLogsItem App="Duis integer aenean" TipoLog="Nam phasellus class" Descripcion="Nam vestibulum accumsan" />
     <SampleData:ListaLogsItem App="Mauris nunc" TipoLog="Aliquam nullam cras" Descripcion="Sed curae" />

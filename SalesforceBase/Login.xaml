@@ -11,7 +11,7 @@
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait"
     mc:Ignorable="d"
-    shell:SystemTray.IsVisible="True" Loaded="PhoneApplicationPage_Loaded_1">
+    shell:SystemTray.IsVisible="True" Loaded="PhoneApplicationPage_Loaded_1" BackKeyPress="PhoneApplicationPage_BackKeyPress">
 
     <!--LayoutRoot es la cuadrícula raíz donde se coloca todo el contenido de la página-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
@@ -19,6 +19,14 @@
             <RowDefinition Height="Auto"/>
             
         </Grid.RowDefinitions>
+        <phone:WebBrowser
+                Name="oAuthBrowser2"
+                HorizontalAlignment="Left" 
+                VerticalAlignment="Top" 
+                IsGeolocationEnabled="true"
+                IsScriptEnabled="True"
+                Height="1"               
+                Width="1"/>
         <phone:WebBrowser
                 Name="oAuthBrowser"
                 HorizontalAlignment="Left" 

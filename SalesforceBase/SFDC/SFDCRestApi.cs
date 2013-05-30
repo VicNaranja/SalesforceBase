@@ -96,7 +96,11 @@ namespace SalesforceBase.SFDC
                         using (var response = (HttpWebResponse)request.EndGetResponse(result))
                         using (var streamResponse = response.GetResponseStream())
                         using (var streamRead = new StreamReader(streamResponse))
-                              responseString = streamRead.ReadToEnd();                                    
+                        {
+                            responseString = streamRead.ReadToEnd();
+                            if (responseString == "")
+                                responseString = "{}";
+                        }
 
                     }
                     catch (Exception ex)

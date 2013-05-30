@@ -9,6 +9,27 @@ namespace SalesforceBase.ViewModels
 {
     public class LogModel : INotifyPropertyChanged
     {
+        private string _id;
+        /// <summary>
+        /// Tipo del log
+        /// </summary>
+        /// <returns></returns>
+        public string Id
+        {
+            get
+            {
+                return _id;
+            }
+            set
+            {
+                if (value != _id)
+                {
+                    _id = value;
+                    NotifyPropertyChanged("Id");
+                }
+            }
+        }
+
         private string _tipoLog;
         /// <summary>
         /// Tipo del log

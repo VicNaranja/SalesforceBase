@@ -29,13 +29,11 @@ namespace SalesforceBase
             listaLogs = new ListaLogsModel();
             DataContext = listaLogs;
 
-            var v = (Visibility)Resources["PhoneLightThemeVisibility"];
-
             // Código de ejemplo para traducir ApplicationBar
             //BuildLocalizedApplicationBar();           
         }
 
-        private async void PhoneApplicationPage_Loaded_1(object sender, RoutedEventArgs e)
+        private async void PhoneApplicationPage_Loaded(object sender, RoutedEventArgs e)
         {
             var loginNecesario = await SFDCSession.Instance.oAuthUserAgentFlow();
 
@@ -52,9 +50,18 @@ namespace SalesforceBase
                 {
                     listaLogs.obtenerUltimosLogs();                    
                 }
-
-
             }
+        }
+
+        private async void ApplicationBarMenuItem_Click_1(object sender, EventArgs e)
+        {
+            //redirigimos al login
+            var isLogoutOk = await SFDCSession.Instance.callLogOut();
+            SFDCSession.Instance.AccessToken = "";
+            SFDCSession.Instance.RefreshToken = "";
+            SFDCSession.Instance.LogOut = true;
+            App.FirstTimeApp = true;
+            this.NavigationService.Navigate(new Uri("/Login.xaml", UriKind.Relative));
         }
 
 

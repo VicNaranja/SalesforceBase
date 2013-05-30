@@ -21,7 +21,8 @@ namespace SalesforceBase
         /// <summary>
         /// Indica si la aplicacion se acaba de iniciar por primera vez. Necesario para cerrar la app desde la pantalla de login
         /// </summary>
-        public static bool FirstTimeApp = false;   
+        public static bool FirstTimeApp = false;
+
 
         /// <summary>
         /// Proporcionar acceso sencillo al marco raíz de la aplicación telefónica.

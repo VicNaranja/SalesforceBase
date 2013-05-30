@@ -10,7 +10,7 @@
     x:Class="SalesforceBase.MainPage"
     mc:Ignorable="d"
     SupportedOrientations="Portrait" Orientation="Portrait"
-    shell:SystemTray.IsVisible="True" Loaded="PhoneApplicationPage_Loaded_1" FontFamily="{StaticResource PhoneFontFamilyNormal}" FontSize="{StaticResource PhoneFontSizeNormal}" Foreground="{StaticResource PhoneForegroundBrush}"
+    shell:SystemTray.IsVisible="True" Loaded="PhoneApplicationPage_Loaded" FontFamily="{StaticResource PhoneFontFamilyNormal}" FontSize="{StaticResource PhoneFontSizeNormal}" Foreground="{StaticResource PhoneForegroundBrush}"
     d:DataContext="{d:DesignData SampleData/LogsModelExample/LogsModelExample.xaml}"
     >
 
@@ -54,22 +54,17 @@
                 <phone:LongListSelector.ItemTemplate>
                     <DataTemplate>
 
-                        <Border BorderBrush="Black" BorderThickness="1" >
-                            <StackPanel Margin="0,0,0,5" >
-                                <StackPanel.Background>
-                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                        <GradientStop Color="#FF7495EC" Offset="0"/>
-                                        <GradientStop Color="#FF1F57EC" Offset="1"/>
-                                    </LinearGradientBrush>
-                                </StackPanel.Background>
-                                <TextBlock TextWrapping="Wrap" Text="{Binding Descripcion}" Margin="5,0,0,0">
+                            <StackPanel Margin="0,0,0,0" >                                
+                                <TextBlock TextWrapping="Wrap" MaxHeight="70" Text="{Binding Descripcion}" Margin="5,0,0,0" FontSize="24">
                                     <TextBlock.Foreground>
                                         <SolidColorBrush Color="{StaticResource PhoneAccentColor}"/>
                                     </TextBlock.Foreground>
                                 </TextBlock>
-                                <TextBlock TextWrapping="Wrap" Text="{Binding App}" Margin="5,0,0,0" Padding="0,0,0,5"/>
+                            <StackPanel Margin="0,0,0,0" Orientation="Horizontal" >
+                                <TextBlock TextWrapping="Wrap" Text="{Binding TipoLog}" Margin="5,0,0,10" FontSize="16" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding App}" Margin="5,0,0,10" FontSize="16" />
                             </StackPanel>
-                        </Border>
+                        </StackPanel>
 
                     </DataTemplate>
                 </phone:LongListSelector.ItemTemplate>
@@ -90,6 +85,9 @@
         <shell:ApplicationBar Mode="Default" IsVisible="True" IsMenuEnabled="True">
             <shell:ApplicationBarIconButton IconUri="/Images/new.png" Text="Nuevo"  />
             <shell:ApplicationBarIconButton IconUri="/Images/edit.png" Text="Borrar"  />
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="logout" Click="ApplicationBarMenuItem_Click_1" />
+            </shell:ApplicationBar.MenuItems>
         </shell:ApplicationBar>
     </phone:PhoneApplicationPage.ApplicationBar>
 

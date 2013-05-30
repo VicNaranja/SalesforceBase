@@ -20,23 +20,35 @@ namespace SalesforceBase
         {
             InitializeComponent();
 
-            
+            //this.oAuthBrowser = new WebBrowser();
         }
 
         private void PhoneApplicationPage_Loaded_1(object sender, RoutedEventArgs e)
         {
             var session = SFDC.SFDCSession.Instance;
+            
             //Cargamos en el explorador la URL de salesforce
             //prepare the request uri and the callback uri
             Uri requestUri = new Uri(session.urlLoginBase + session.ConsumerKey + "&redirect_uri=" + WebUtility.UrlEncode(session.RedirectUri),UriKind.Absolute);
             Uri callbackUri = new Uri(session.RedirectUri);
-            
+
+            //this.oAuthBrowser = new WebBrowser();
             this.oAuthBrowser.Navigating += oAuthBrowser_Navigating;
-            this.oAuthBrowser.Navigate(requestUri);
+
+            if (session.LogOut)
+            {
+                Uri requestUriLogOut = new Uri(session.InstanceUrl + "/secur/logout.jsp", UriKind.Absolute);
+                this.oAuthBrowser2.Navigate(requestUriLogOut);
+                this.oAuthBrowser.Navigate(requestUri);
+            }
+            else
+            {
+                this.oAuthBrowser.Navigate(requestUri);
+            }
 
         }
 
-        void oAuthBrowser_Navigating(object sender, NavigatingEventArgs e)
+        async void oAuthBrowser_Navigating(object sender, NavigatingEventArgs e)
         {
             var response = e.Uri.ToString();
             if (response.LastIndexOf("access_token=") != -1)
@@ -62,9 +74,11 @@ namespace SalesforceBase
                     }
 
                 }
-                e.Cancel = true;
-
-                this.NavigationService.Navigate(new Uri("/MainPage.xaml", UriKind.Relative));
+                e.Cancel = true;                
+                await oAuthBrowser.ClearCookiesAsync();
+                await oAuthBrowser.ClearInternetCacheAsync();
+                
+                NavigationService.GoBack();
             }
         }
 
@@ -82,7 +96,8 @@ namespace SalesforceBase
                 }
             }
         }
-      
+
+            
         
     }
 }

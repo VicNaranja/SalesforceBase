@@ -14,7 +14,9 @@ namespace SalesforceBase.SFDC
 
         public const String REFRESH_TOKEN = "sfdc_refreshToken";
         public const String URL_INSTANCE = "sfdc_urlInstance";
-        
+
+        public bool LogOut { get; set; }
+
         private static volatile SFDCSession instance;
         private static object syncRoot = new Object();
         private String _refreshToken = "";
@@ -175,6 +177,21 @@ namespace SalesforceBase.SFDC
                 InstanceUrl = (string)responseObject["instance_url"];
                 return true;
             }
+        }
+
+        /**
+        * Revokamos el Token
+        *
+        **/
+        public async Task<bool> callLogOut()
+        {
+            SFDCRestApi sfdcRestApi = new SFDCRestApi();
+            JObject responseObject = await sfdcRestApi.Request("GET",
+                                                               "https://login.salesforce.com/services/oauth2/revoke?token=" + this.AccessToken + "&refresh_token=" + this.RefreshToken,
+                                                               ""
+                                                              );
+
+            return true;
         }
 
 
